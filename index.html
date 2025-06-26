@@ -1,84 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andreas Krehan - CV Card</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Andreas Krehan - CV</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css "/>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             padding: 20px;
-        }
-        .card {
-            max-width: 400px;
-            margin: auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
+            background-color: #f4f7fa;
             color: #333;
-            margin-bottom: 10px;
         }
-        p {
-            color: #555;
-            margin: 5px 0;
+
+        .card {
+            max-width: 500px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: all 0.3s ease;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 10px 0;
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
-        li {
-            margin: 5px 0;
-            color: #444;
-        }
+
         .header {
             text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
         }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        p.subtitle {
+            font-weight: bold;
+            color: #3498db;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
         .contact {
-            margin-top: 10px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .contact a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3498db;
+            text-decoration: none;
+            margin: 8px 0;
+            transition: color 0.2s ease;
+        }
+
+        .contact a:hover {
+            color: #2980b9;
+        }
+
+        .contact i {
+            margin-right: 8px;
+            width: 20px;
             text-align: center;
         }
-        .contact a {
-            color: #007BFF;
-            text-decoration: none;
+
+        h2.section-title {
+            color: #2c3e50;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+            margin-top: 25px;
+            font-size: 20px;
         }
-        .contact a:hover {
-            text-decoration: underline;
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 10px 0;
+        }
+
+        li.skill-tag {
+            display: inline-block;
+            background-color: #e8f0fe;
+            color: #3498db;
+            padding: 5px 10px;
+            margin: 4px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        li.project-item {
+            margin: 8px 0;
+        }
+
+        li strong {
+            color: #2c3e50;
+        }
+
+        .qrcode {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #eee;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
 <div class="card">
+
     <div class="header">
-        <h1>Mr. Andreas Krehan</h1>
-        <p>Blockchain Enthusiast & Technology Innovator</p>
+        <h1>Andreas Krehan</h1>
+        <p class="subtitle">Self-Taught AI & Blockchain Innovator | Experimental Developer</p>
     </div>
 
     <div class="contact">
-        <p><strong>Email:</strong> <a href="mailto:andreas.krehan@t-online.de">andreas.krehan@t-online.de</a></p>
-        <p><strong>Location:</strong> Remote / Global</p>
+        <a href="mailto:andreas.krehan@t-online.de">
+            <i class="fas fa-envelope"></i> andreas.krehan@t-online.de
+        </a>
+        <a href="#">
+            <i class="fas fa-map-marker-alt"></i> Remote / Global
+        </a>
     </div>
 
-    <h2>About</h2>
-    <p>Passionate about blockchain technology and artificial intelligence. Developing decentralized solutions in my free time to improve transparency and efficiency.</p>
+    <h2 class="section-title">About</h2>
+    <p>
+        I develop experimental technologies at the intersection of AI and blockchain.
+        My work is driven by curiosity, self-directed learning, and building tools that anticipate future needs.
+    </p>
 
-    <h2>Skills</h2>
+    <h2 class="section-title">Projects</h2>
     <ul>
-        <li>Blockchain Development</li>
-        <li>Smart Contracts</li>
-        <li>Data Tracking & Verification</li>
-        <li>AI Basics</li>
+        <li class="project-item">
+            <strong>Decentralized Time Tracking App</strong><br>
+            An experimental Android app for blockchain-based time tracking using Vechain. Features:
+            <ul>
+                <li>In-app generation of Vechain wallet</li>
+                <li>Storing working hours via smart contract</li>
+                <li>GPS-based clock-in zone with adjustable radius</li>
+                <li>Direct sync with smart contract instead of central database</li>
+                <li>Admin area for employers to review recorded hours</li>
+            </ul>
+        </li>
     </ul>
 
-    <h2>Education</h2>
-    <p>Self-taught in blockchain and AI technologies.</p>
+    <h2 class="section-title">Skills</h2>
+    <ul>
+        <li class="skill-tag">Solidity</li>
+        <li class="skill-tag">Hardhat</li>
+        <li class="skill-tag">Android SDK</li>
+        <li class="skill-tag">Smart Contracts</li>
+        <li class="skill-tag">Blockchain Development</li>
+        <li class="skill-tag">GPS / Location Services</li>
+        <li class="skill-tag">Web3.js / Ethers.js</li>
+        <li class="skill-tag">Python (AI Basics)</li>
+        <li class="skill-tag">Git / GitHub</li>
+    </ul>
+
+    <h2 class="section-title">Experience</h2>
+    <ul>
+        <li class="project-item">
+            <strong>Self-Directed Researcher & Builder</strong>, 2021–present
+            <ul>
+                <li>Conceptualization and development of experimental blockchain applications</li>
+                <li>Prototyping AI integration for automated transaction validation</li>
+                <li>Ongoing documentation and open-source code sharing on GitHub</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2 class="section-title">Education</h2>
+    <p>
+        Autodidactically built expertise in blockchain and AI through hands-on implementation.
+    </p>
+
+    <!-- QR-Code Einbindung -->
+    <img src="qrcode_broski001.github.io.png" alt="QR Code to my CV" class="qrcode" />
+
 </div>
 
 </body>
